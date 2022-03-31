@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="description" content="Address, with JavaScript" />
+    <meta name="description" content="Perimeter of Right Triangle, with JavaScript" />
     <meta name="keywords" content="mths, ics2o" />
     <meta name="author" content="Kaitlyn Ip" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,13 +10,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
     <link rel="manifest" href="site.webmanifest" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.green-light_green.min.css" />
-    <link rel="stylesheet" href="./css/style.css">
-    <title>xxx</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Perimeter of Right Triangle, with JavaScript</title>
   </head>
   <body>
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
@@ -24,11 +21,62 @@
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">xxx</span>
+          <span class="mdl-layout-title">Perimeter of Right Triangle, with JS</span>
         </div>
       </header>
       <main class="mdl-layout__content">
-        
+        <table>
+          <tr>
+            <th>
+              <img src="./img/perimeter-of-right-triangle.png" alt="Triangle"/>
+            </th>
+            <th>
+              <h2>Formula</h2>
+              <h3>Perimeter = Base + Height + √Base² + Height²</h3>
+            </th>
+          </tr>
+        </table>
+        <!-- Numeric Textfield -->
+        <form action="#">
+          <p>Base</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="base-of-triangle"
+            />
+            <label class="mdl-textfield__label" for="base-of-triangle">Base ...</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+        <!-- Numeric Textfield -->
+        <form action="#">
+          <p>Height</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="height-of-triangle"
+            />
+            <label class="mdl-textfield__label" for="height-of-triangle">Height ...</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+        <!-- Raised button with ripple -->
+        <button
+          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+          onclick="calculate()"
+        >
+          Calculate
+        </button>
+        <br />
+        <p>
+          <div id="answer">
+            <div id="area"></div>
+          </div>
+        </p>
       </main>
     </div>
   </body>
