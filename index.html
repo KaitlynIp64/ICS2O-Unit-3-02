@@ -42,9 +42,8 @@
           <div class="mdl-textfield mdl-js-textfield">
             <input
               class="mdl-textfield__input"
-              type="text"
-              pattern="-?[0-9]*(\.[0-9]+)?"
-              id="length-of pyramid"
+              type="number" step=".01"
+              id="length-of-pyramid"
             />
             <label class="mdl-textfield__label" for="length-of-pyramid">Length ...</label>
             <span class="mdl-textfield__error">Input is not a number!</span>
@@ -56,8 +55,7 @@
           <div class="mdl-textfield mdl-js-textfield">
             <input
               class="mdl-textfield__input"
-              type="text"
-              pattern="-?[0-9]*(\.[0-9]+)?"
+              type="number" step=".01"
               id="width-of-pyramid"
             />
             <label class="mdl-textfield__label" for="width-of-pyramid">Width ...</label>
@@ -70,8 +68,7 @@
           <div class="mdl-textfield mdl-js-textfield">
             <input
               class="mdl-textfield__input"
-              type="text"
-              pattern="-?[0-9]*(\.[0-9]+)?"
+              type="number" step=".01"
               id="height-of-pyramid"
             />
             <label class="mdl-textfield__label" for="height-of-pyramid">Height ...</label>
@@ -83,13 +80,9 @@
           class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
           onclick="calculate()">
           Calculate
-          <br/>
-        <p>
-          <div id="answer">
-            <div id="volume"></div>
-          </div>
-        </p>
-        </button>
+          </button>
+        <br>
+        <div id="volume"></div>
       </main>
     </div>
   </body>
