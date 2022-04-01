@@ -6,16 +6,17 @@
 
 'use strict'
 /**
- * This function calculates perimeter of triangle.
+ * This function calculates volume of pyramid.
  */
 function calculate () {
   // input
-  const base = parseInt(document.getElementById('base-of-triangle').value)
-  const height = parseInt(document.getElementById('height-of-triangle').value)
+  const length = parseFloat(document.getElementById("length-of-pyramid").value)
+  const width = parseFloat(document.getElementById("width-of-pyramid").value)
+  const height = parseInt(document.getElementById('height-of-pyramid').value)
 
   // process
-  const perimeter = base + height + (base ** 2 + height ** 2) ** 0.5
+  const volume = (length * width * height) / 3
 
   // output
-  document.getElementById('area').innerHTML = 'Perimeter is: ' + perimeter.toFixed(2) + ' cm'
+  document.getElementById('volume').innerHTML = 'volume is: ' + volume.toFixed(2) + ' mm³'
 }
